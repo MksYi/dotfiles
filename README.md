@@ -1,7 +1,7 @@
 # MksYi's Linux config files
 
 ## Install
-`sudo git clone https://github.com/MksYi/ubuntu-env.git .dotfiles --depth 1 && cd .dotfiles && sudo bash scripts/install.sh`
+`sudo git clone https://github.com/MksYi/dotfiles.git .dotfiles --depth 1 && cd .dotfiles && scripts/install.sh`
 
 ## Reference Config
 
