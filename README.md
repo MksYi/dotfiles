@@ -1,7 +1,7 @@
 # MksYi's Linux config files
 
 ## Install
-`dgit clone https://github.com/MksYi/dotfiles.git .dotfiles --depth 1 && cd .dotfiles && scripts/install.sh`
+`git clone https://github.com/MksYi/dotfiles.git .dotfiles --depth 1 && cd .dotfiles && scripts/install.sh`
 
 ## Reference Config
 
