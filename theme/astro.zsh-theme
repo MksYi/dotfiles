@@ -2,7 +2,7 @@
 local current_dir='${PWD/#$HOME/~} '
 
 # ret status
-local ret_status="(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}(ﾉ˚Д˚)ﾉ )"
+local ret_status="(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 
 # Git short sha
 local git_sha='$(git_prompt_short_sha)'
