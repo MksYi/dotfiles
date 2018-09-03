@@ -15,6 +15,14 @@
 
 And then, cheange cmd Font.  
 
+### Launch Zsh
+
+Add the following lines to your `~/.bashrc`
+```bash
+if [ -t 1 ]; then
+    exec zsh
+fi
+```
 ## Reference Config
 
 - Inndy/[dotfiles](https://github.com/Inndy/dotfiles)

@@ -12,13 +12,7 @@ dhMCKGVmMiEi+c/86vJDGS8cKposxAcAAA==
 command="echo 'Asia/Taipei' > /etc/timezone &&
          apt-get update &&
          apt-get upgrade -y &&
-         apt-get install -y git-core tmux vim build-essential python3 python3-pip zsh fonts-powerline &&
-         git clone https://github.com/longld/peda.git ~/peda &&
-         echo 'source ~/peda/peda.py' >> ~/.gdbinit
-         git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh &&
-         sh -c ~/.oh-my-zsh/tools/install.sh &&
-         sudo apt-get install fonts-powerline &&
-         chsh -s /bin/zsh"
+         apt-get install -y git-core tmux vim build-essential python3 python3-pip zsh fonts-powerline"
 
 sudo sh -c "$command"
 
@@ -28,3 +22,9 @@ files='zshrc
 for file in `echo $files | tr ' ' '\n'`; do
     ln -sf ~/.dotfiles/$file ~/.$file
 done
+
+echo "source $HOME/.dotfiles/peda/peda.py" >> ~/.gdbinit
+git submodule update --init peda
+sudo sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+echo 'Done!'
