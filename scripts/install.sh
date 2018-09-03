@@ -12,7 +12,7 @@ dhMCKGVmMiEi+c/86vJDGS8cKposxAcAAA==
 command="echo 'Asia/Taipei' > /etc/timezone &&
          apt-get update &&
          apt-get upgrade -y &&
-         apt-get install -y git-core tmux vim build-essential python3 python3-pip zsh fonts-powerline"
+         apt-get install -y git-core tmux vim build-essential python3 python3-pip zsh fonts-powerline gdb"
 
 sudo sh -c "$command"
 
@@ -25,6 +25,6 @@ done
 
 echo "source $HOME/.dotfiles/peda/peda.py" >> ~/.gdbinit
 git submodule update --init peda
-sudo sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 echo 'Done!'
