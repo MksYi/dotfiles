@@ -3,7 +3,7 @@
 ![Demo](img/img.png)
 
 ## Install On Your Linux
-`git clone https://github.com/MksYi/dotfiles.git .dotfiles --depth 1 && cd .dotfiles && scripts/install.sh`
+`git clone https://github.com/MksYi/dotfiles.git .dotfiles --depth 1 && cd .dotfiles && bash scripts/install.sh`
 
 ## For Windows Linux Shell  
 
