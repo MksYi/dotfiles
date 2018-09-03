@@ -12,9 +12,15 @@ dhMCKGVmMiEi+c/86vJDGS8cKposxAcAAA==
 command="echo 'Asia/Taipei' > /etc/timezone &&
          apt-get update &&
          apt-get upgrade -y &&
-         apt-get install -y git-core tmux vim build-essential python3 python3-pip zsh fonts-powerline gdb"
+         apt-get install -y git-core tmux vim build-essential python3 python3-pip zsh fonts-powerline gdb &&
+         wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh"
 
 sudo sh -c "$command"
+
+command="git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh &&
+         ~/.oh-my-zsh/tools/install.sh"
+
+sh -c "$command"
 
 files='zshrc
        vimrc
@@ -22,10 +28,7 @@ files='zshrc
 for file in `echo $files | tr ' ' '\n'`; do
     ln -sf ~/.dotfiles/$file ~/.$file
 done
+
 ln -sf ~/.dotfiles/theme/astro.zsh-theme ~/.oh-my-zsh/themes/astro.zsh-theme
-
-echo "source $HOME/.dotfiles/peda/peda.py" >> ~/.gdbinit
 git submodule update --init peda
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
-echo 'Done!'
+echo "source $HOME/.dotfiles/peda/peda.py" >> ~/.gdbinit
