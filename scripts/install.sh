@@ -22,6 +22,7 @@ files='zshrc
 for file in `echo $files | tr ' ' '\n'`; do
     ln -sf ~/.dotfiles/$file ~/.$file
 done
+ln -sf ~/.dotfiles/theme/astro.zsh-theme ~/.oh-my-zsh/themes/astro.zsh-theme
 
 echo "source $HOME/.dotfiles/peda/peda.py" >> ~/.gdbinit
 git submodule update --init peda

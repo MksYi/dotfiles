@@ -26,3 +26,4 @@ fi
 ## Reference Config
 
 - Inndy/[dotfiles](https://github.com/Inndy/dotfiles)
+- iplaces/[astro-zsh-theme](https://github.com/iplaces/astro-zsh-theme)
