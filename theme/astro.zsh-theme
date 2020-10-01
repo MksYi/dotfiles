@@ -2,12 +2,12 @@
 local current_dir='${PWD/#$HOME/~} '
 
 # User info
-local user="%(!.%{$terminfo[bold]$fg[red]%}.%{$terminfo[bold]$fg[red]%})%n%{$reset_color%}"
+local user="%(!.%{$terminfo[bold]$fg[cyan]%}.%{$terminfo[bold]$fg[cyan]%})%n%{$reset_color%}"
 
 # Host info
 typeset -A host_repr
 host_repr=('dieter-ws-a7n8x-arch' "%{$fg_bold[green]%}ws" 'dieter-p4sci-arch' "%{$fg_bold[blue]%}p4")
-local host="@${host_repr[$HOST]:-$HOST}%{$reset_color%}"
+local host="@%{$terminfo[bold]$fg[red]%}${host_repr[$HOST]:-$HOST}%{$reset_color%}"
 
 # ret status
 local ret_status="(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
@@ -28,7 +28,6 @@ ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}\u2718"
 # Prompt format: \n # DIRECTORY [GIT_BRANCH STATE GIT_SHA] [TIME] \n ➜
 PROMPT="
 ${user}${host} \
-%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${git_info}\
 ${git_sha}\
