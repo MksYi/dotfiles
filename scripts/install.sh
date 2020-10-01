@@ -30,5 +30,3 @@ for file in `echo $files | tr ' ' '\n'`; do
 done
 
 ln -sf ~/.dotfiles/theme/astro.zsh-theme ~/.oh-my-zsh/themes/astro.zsh-theme
-git submodule update --init peda
-echo "source $HOME/.dotfiles/peda/peda.py" >> ~/.gdbinit
