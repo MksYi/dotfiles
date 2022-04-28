@@ -8,7 +8,7 @@ ajhOUAxX9SYfLjmJvXtoG+a0GC+jQnsdjsmkzFQDhLKkHMzhgR9PrTGGs/5CPsSC91O7a2tPXcrT
 l8RFmvxLmNzHmV9XSN64pKbOTVKHN9Qji59IP75jHQ00A06kvtNYiX0aoO8BKINUNzoFaENLz//p
 dhMCKGVmMiEi+c/86vJDGS8cKposxAcAAA==
 " | base64 --decode | gzip -d
-    
+
 command="echo 'Asia/Taipei' > /etc/timezone &&
          apt-get update &&
          apt-get upgrade -y &&
@@ -17,7 +17,7 @@ command="echo 'Asia/Taipei' > /etc/timezone &&
 
 sudo sh -c "$command"
 
-command="git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh &&
+command="git clone https://github.com/ohmyzsh/ohmyzsh ~/.oh-my-zsh &&
          ~/.oh-my-zsh/tools/install.sh"
 
 sh -c "$command"
@@ -30,3 +30,11 @@ for file in `echo $files | tr ' ' '\n'`; do
 done
 
 ln -sf ~/.dotfiles/theme/astro.zsh-theme ~/.oh-my-zsh/themes/astro.zsh-theme
+
+folders='Service
+		 Tools
+		 tmp'
+
+for folder in `echo $folders | tr ' ' '\n'`; do
+	mkdir ~/$folder
+done
