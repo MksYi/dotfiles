@@ -23,8 +23,7 @@ command="git clone https://github.com/ohmyzsh/ohmyzsh ~/.oh-my-zsh &&
 sh -c "$command"
 
 files='zshrc
-       vimrc
-       tmux.conf'
+       vimrc'
 for file in `echo $files | tr ' ' '\n'`; do
     ln -sf ~/.dotfiles/$file ~/.$file
 done
@@ -33,6 +32,8 @@ ln -sf ~/.dotfiles/theme/astro.zsh-theme ~/.oh-my-zsh/themes/astro.zsh-theme
 
 folders='Service
 		 Tools
+		 bin
+		 Share
 		 tmp'
 
 for folder in `echo $folders | tr ' ' '\n'`; do

@@ -115,7 +115,8 @@ if [ -f /usr/local/share/zsh/helpfiles ]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
-
+export PATH="/home/mksyi/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 
