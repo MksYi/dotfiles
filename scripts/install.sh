@@ -12,7 +12,7 @@ dhMCKGVmMiEi+c/86vJDGS8cKposxAcAAA==
 command="echo 'Asia/Taipei' > /etc/timezone &&
          apt-get update &&
          apt-get upgrade -y &&
-         apt-get install -y git-core tmux vim build-essential python3 python3-pip zsh fonts-powerline gdb &&
+         apt-get install -y git-core tmux vim build-essential python3 python3-pip zsh fonts-powerline gdb ncdu &&
          wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh"
 
 sudo sh -c "$command"
