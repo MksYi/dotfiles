@@ -11,6 +11,7 @@ ZSH=$HOME/.oh-my-zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias a="arsenal"
 alias ll="ls -l"
 alias la="ls -a"
 alias l="ls -alh"
